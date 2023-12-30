@@ -1,12 +1,13 @@
 package model.entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Contract {
 	
-	private int number;
-	private Date date;
+	private Integer number;
+	private LocalDate date;
 	private double totalValue;
+	private Installment instalment;
 	
 	
 	public Contract() {
@@ -14,29 +15,30 @@ public class Contract {
 	}
 
 
-	public Contract(int number, Date date, double totalValue) {
+	public Contract(Integer number, LocalDate date, double totalValue, Installment instalment) {
 		this.number = number;
 		this.date = date;
 		this.totalValue = totalValue;
+		this.instalment = instalment;
 	}
 
 
-	public int getNumber() {
+	public Integer getNumber() {
 		return number;
 	}
 
 
-	public void setNumber(int number) {
+	public void setNumber(Integer number) {
 		this.number = number;
 	}
 
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 
@@ -49,6 +51,18 @@ public class Contract {
 	public void setTotalValue(double totalValue) {
 		this.totalValue = totalValue;
 	}
+
+
+	public Installment getInstalment() {
+		return instalment;
+	}
+
+
+	public void setInstalment(Installment instalment) {
+		this.instalment = instalment;
+	}
+	
+	
 	
 	
 
